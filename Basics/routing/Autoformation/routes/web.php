@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MyController;
+use App\Http\Controllers\SingleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,3 +58,8 @@ Route::redirect('/chelot', 'index');
 Route::get('/person/{id}', function ($id) {
     return 'person id : ' . $id;
 });
+/// Controller Section
+
+Route::get("/test", [MyController::class, 'show']);
+//single controller callout
+Route::get("/single", SingleController::class);
