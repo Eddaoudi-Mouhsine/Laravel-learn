@@ -3,6 +3,7 @@
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\SingleController;
 use Illuminate\Support\Facades\Route;
+use  App\Http\Controllers\Promotions;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,7 @@ Route::get('/person/{id}', function ($id) {
 Route::get("/test", [MyController::class, 'show']);
 //single controller callout
 Route::get("/single", SingleController::class);
+
+
+//calling out the single controller
+Route::resource('promotions', promotions::class);
