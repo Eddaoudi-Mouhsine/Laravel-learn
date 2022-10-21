@@ -68,3 +68,20 @@ Route::get("/single", SingleController::class);
 
 //calling out the single controller
 Route::resource('promotions', promotions::class);
+
+
+//lets sort out some views( here you will find the start of the view templating engine chapter)
+
+
+
+
+Route::get("/viewtem0", function () {
+    return view('viewtem0');
+});
+
+Route::get('/viewtem', function () {
+    return view('viewtem');
+});
+Route::get("/viewtem2", function () {
+    return view('tem2');
+});
